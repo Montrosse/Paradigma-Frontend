@@ -112,20 +112,20 @@ export const useActiveDisputesForUser = (address?: string) => {
   const [topics, setTopics] = useState<ITopicsData>();
   const activeDebates = useGetActiveDisputesForUser(address);
 
-  // const activeDebates: ActiveDebates = [
-  //   {
-  //     topicId: BigInt(1),
-  //     disputeId: BigInt(1),
-  //   },
-  //   {
-  //     topicId: BigInt(1),
-  //     disputeId: BigInt(2),
-  //   },
-  //   {
-  //     topicId: BigInt(2),
-  //     disputeId: BigInt(1),
-  //   },
-  // ];
+   const activeDebates: ActiveDebates = [
+     {
+       topicId: BigInt(1),
+       disputeId: BigInt(1),
+     },
+     {
+       topicId: BigInt(1),
+       disputeId: BigInt(2),
+     },
+     {
+       topicId: BigInt(2),
+       disputeId: BigInt(1),
+     },
+   ];
 
   const fetchTopics = useCallback(async () => {
     if (!activeDebates) {
